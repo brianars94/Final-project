@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <div class="container">
         <div class="weather-app">
             <form class="search-form" id="search-form">
                 <div class="row">
@@ -31,32 +30,47 @@
                     </div>
                 </div>
             </form>
+
+            <li id="date"></li>
+                    
+
+            <br>
             <h1 id="city"></h1>
-            <ul>
-                <li id="date"></li>
-                <li id="description"></li> ☀️
-            </ul>
+          
+
+<li> <span id="country"></span> </li>
+<li>Current conditions: <span id="description"></span> </li>
+         ☀️
+           
             <div class="row">
                 <div class="col-6">
                     <div class="clearfix">
                         <div class="float-left">
-                            <span class="temperature" id="temperature"></span><span class="units">°C</span>
+                            <span class="temperature" id="temperature"></span>
+                            <span class="units">°F | °C</span>
+
+                            
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <ul>
- <li>Precipitation: <span id="presripitation"></span> km/h</li>
+ <li>Sunrise: <span id="sunrise"></span> </li>
+<li>Sunset: <span id="sunset"></span> </li>
+
                         <li>Humidity: <span id="humidity"></span>%</li>
                         <li>Wind: <span id="wind"></span> km/h</li>
                     </ul>
                 </div>
             </div>
                 <section>
-                    <div class="container">
-                        <br>
-                        <h6>Seven day forcast:</h6>
-                    </div>
+                    <div class="sevenDay">
+                    
+                                            <div class="fiveDay">
+
+                        Five day forcast:
+                                            </div>
+                    
                 <id="sevenDay"></id>
                     <div class="card-group">
                         <div class="card">
@@ -94,31 +108,22 @@
                                 <p>☀️</p>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">F</h5>
-                                <p class="card-text">88</p>
-                                <p>☀️</p>
+                  
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">S</h5>
-                                <p class="card-text">88</p>
-                                <p>☀️</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                This page was built by <a href="https://www.linkedin.com/in/briana-sanazzaro/"> Briana Sanazzaro. </a> <br>
+                    
+                                <div class="built">
+
+                This page was built by <a href="https://www.linkedin.com/in/briana-sanazzaro/"> Briana Sanazzaro. </a> 
                  Open source code: <a href="https://github.com/brianars94/Week6">Git Hub</a>
-                 <br>
-              
+                        </div>
+
+                </section>
         </div>
     </div>
-        
-            <span> <a></a></span>
-        </div>
+
+   
+
     <script src="src/script.js"></script>
 </body>
 

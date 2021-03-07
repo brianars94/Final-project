@@ -6,7 +6,7 @@ body {
 }
 h1 {
   color: #282628;
-  font-size: 24px;
+  font-size: 35px;
   font-weight: 100;
   line-height: 28px;
   margin: 0;
@@ -41,10 +41,16 @@ li {
   width: 64px;
   margin-right: 10px;
 }
-
+.sevenDay {
+  border: 1px solid #ffaa00;
+  padding: 7px;
+  margin: 10px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
 .temperature {
   color: rgb(33, 33, 33);
-  font-size: 64px;
+  font-size: 55px;
   font-weight: 400;
   line-height: 1;
 }
@@ -59,10 +65,6 @@ li {
   color: orange;
 }
 
-.sevenDay {
-  color: orange;
-}
-
 button:hover {
   cursor: pointer;
   background: orange;
@@ -74,4 +76,15 @@ row {
 
 col {
   text-align: center;
+}
+
+.card-title {
+  font-size: smaller;
+}
+.fiveDay {
+  font-size: large;
+  font-weight: bolder;
+}
+.built {
+  font-size: x-small;
 }
