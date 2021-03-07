@@ -85,6 +85,16 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
+function fiveDay(city) {
+    let units = "Imperial";
+  let apiKey = "5b04d8f11f13d51bcad99c422481b0ab";
+  let apirUrl = `api.openweathermap.org/data/2.5/forecast/daily?q=${city}&mode=xml&units=${units}&cnt=7&appid=${apiKey}`;
+}
+
+
+
+
+
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
