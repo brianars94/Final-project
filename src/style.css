@@ -49,6 +49,8 @@ li {
   max-width: 600px;
 }
 .temperature {
+  position: relative;
+  margin-left: 40px;
   color: rgb(33, 33, 33);
   font-size: 55px;
   font-weight: 400;
@@ -57,7 +59,7 @@ li {
 
 .units {
   position: relative;
-  top: -34px;
+  top: -29px;
 }
 
 .search-form {
