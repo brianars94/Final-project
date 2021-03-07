@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Briana's Weather App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <form class="search-form" id="search-form">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="search" placeholder="Type a city.." autofocus="on" autocomplete="off"
+                            id="city-input" class="form-control shadow-sm" />
+                    </div>
+                    <div class="col-3">
+                        <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm w-100" />
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-success w-100" id="current-location-button">
+                            Current
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <h1 id="city"></h1>
+            <ul>
+                <li id="date"></li>
+                <li id="description"></li> ☀️
+            </ul>
+            <div class="row">
+                <div class="col-6">
+                    <div class="clearfix">
+                        <div class="float-left">
+                            <span class="temperature" id="temperature"></span><span class="units">°C</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <ul>
+ <li>Precipitation: <span id="presripitation"></span> km/h</li>
+                        <li>Humidity: <span id="humidity"></span>%</li>
+                        <li>Wind: <span id="wind"></span> km/h</li>
+                    </ul>
+                </div>
+            </div>
+                <section>
+                    <div class="container">
+                        <br>
+                        <h6>Seven day forcast:</h6>
+                    </div>
+                <id="sevenDay"></id>
+                    <div class="card-group">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Today</h5>
+                                <p class="card-text">88</p>
+                                <p>☀️</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">M</h5>
+                                <p class="card-text">89</p>
+                                <p>☀️</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">T</h5>
+                                <p class="card-text">78</p>
+                                <p>☀️</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">W</h5>
+                                <p class="card-text">88</p>
+                                <p>☀️</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Th</h5>
+                                <p class="card-text">79</p>
+                                <p>☀️</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">F</h5>
+                                <p class="card-text">88</p>
+                                <p>☀️</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">S</h5>
+                                <p class="card-text">88</p>
+                                <p>☀️</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                This test test test page was built by <a href="https://www.linkedin.com/in/briana-sanazzaro/"> Briana Sanazzaro. </a> <br>
+                 Open source code: <a href="https://github.com/brianars94/Week6">Git Hub</a>
+                 <br>
+              
+        </div>
+    </div>
+        
+            <span> <a></a></span>
+        </div>
+    <script src="src/script.js"></script>
+</body>
+
+</html>
