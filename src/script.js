@@ -89,54 +89,15 @@ function fiveDay(city) {
   let apirUrl = `api.openweathermap.org/data/2.5/forecast/daily?q=${city}&mode=xml&units=${units}&cnt=7&appid=${apiKey}`;
 }
 
-
-
-
-
 function getCurrentLocation(event) {
   event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
 }
-
-
-
-
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
-}
-
-function convertToCelsius(event) {
-    event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#current-temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-
-
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-button");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-button");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
-
-
-
-
-
+ navigator.geolocation.getCurrentPosition(searchLocation);
 
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
+dateElement.innerHTML = formatDate(currentTime);
 dateElement.innerHTML = formatDate(currentTime);
 
 let searchForm = document.querySelector("#search-form");
