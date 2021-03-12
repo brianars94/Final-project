@@ -61,6 +61,13 @@ li:first-letter {
   font-weight: 400;
   line-height: 1;
 }
+.units .active {
+  cursor: default;
+  color: #282628;
+}
+.units .active:hover {
+  text-decoration: none;
+}
 
 .units {
   position: relative;
