@@ -4,6 +4,7 @@ body {
   margin: 50px;
   border-color: orange;
 }
+
 h1 {
   color: #282628;
   font-size: 35px;
@@ -25,6 +26,10 @@ li {
   height: 19px;
   line-height: 1;
   list-style: none;
+}
+
+li:first-letter {
+  text-transform: capitalize;
 }
 
 .weather-app {

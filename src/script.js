@@ -39,8 +39,7 @@ let year = date.getFullYear();
   let day = days[dayIndex];
 let todaysDate = date.getDate();
 
-  return `Today Date: ${day}, ${todaysDate} ${month} ${year}.
-  Current Time: ${hours}:${minutes}`;
+  return `Last Updated: ${day}, ${todaysDate} ${month} ${year} at ${hours}:${minutes}`;
 }
 
 function displayWeatherCondition(response) {
@@ -105,6 +104,8 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+
 
 searchCity("Honolulu");
 
