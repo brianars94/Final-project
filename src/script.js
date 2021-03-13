@@ -53,6 +53,13 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+    document.querySelector("#min").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+    document.querySelector("#max").innerHTML = Math.round(
+    response.data.main.temp_max);
+  
+  
   document.querySelector("#icon").innerHTML =
     response.data.weather[0].icon;
 
