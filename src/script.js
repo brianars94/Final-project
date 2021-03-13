@@ -104,8 +104,7 @@ function searchLocation(position) {
 
 function getCurrentLocation(event) {
   event.preventDefault();
-   navigator.geolocation.getCurrentPosition(searchLocation);
-
+  navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
 let dateElement = document.querySelector("#date");
@@ -119,13 +118,13 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 
-
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
 
-  celsiusLink.classList.add("active");
+  
   let celsiusTemperature = (fahrenheitTemperature - 30) / 2;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
