@@ -68,9 +68,7 @@ function displayWeatherCondition(response) {
     response.data.wind.speed
   );
     document.querySelector("#country").innerHTML = response.data.sys.country;
-  document.querySelector("#sunrise").innerHTML = response.data.sys.sunrise;
 
-    document.querySelector("#sunset").innerHTML = response.data.sys.sunset;
 
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
