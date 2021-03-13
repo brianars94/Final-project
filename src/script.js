@@ -53,11 +53,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
-    document.querySelector("#min").innerHTML = Math.round(
-    response.data.main.temp_min
-  );
-    document.querySelector("#max").innerHTML = Math.round(
-    response.data.main.temp_max);
+   
   
   
   document.querySelector("#icon").innerHTML =
@@ -68,7 +64,11 @@ function displayWeatherCondition(response) {
     response.data.wind.speed
   );
     document.querySelector("#country").innerHTML = response.data.sys.country;
-
+ document.querySelector("#min").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+    document.querySelector("#max").innerHTML = Math.round(
+    response.data.main.temp_max);
 
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
@@ -100,23 +100,16 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
-function fiveDay(city) {
-    let units = "Imperial";
-  let apiKey = "5b04d8f11f13d51bcad99c422481b0ab";
-  let apirUrl = `api.openweathermap.org/data/2.5/forecast/daily?q=${city}&mode=xml&units=${units}&cnt=7&appid=${apiKey}`;
-}
+
 
 function getCurrentLocation(event) {
   event.preventDefault();
    navigator.geolocation.getCurrentPosition(searchLocation);
 
 }
- navigator.geolocation.getCurrentPosition(searchLocation);
-
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
-dateElement.innerHTML = formatDate(currentTime);
 dateElement.innerHTML = formatDate(currentTime);
 
 let searchForm = document.querySelector("#search-form");
@@ -137,37 +130,25 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-function displayFahrenheittemperature(event) {
+function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let celsiusTemperature = (fahrenheitTemperature - 30) / 2;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
   celsiusLink.classList.remove("active");
-
   fahrenheitLink.classList.add("active");
-
-
-
+  let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
-
-
-
 let fahrenheitTemperature = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displaycelsiusTemperature);
-
-
-
-
-
-
-
-
