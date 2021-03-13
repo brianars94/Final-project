@@ -61,17 +61,17 @@ li:first-letter {
   font-weight: 400;
   line-height: 1;
 }
+
+.units {
+  top: -19px;
+}
+
 .units .active {
   cursor: default;
   color: #282628;
 }
 .units .active:hover {
   text-decoration: none;
-}
-
-.units {
-  position: relative;
-  top: -29px;
 }
 
 .search-form {
@@ -94,10 +94,6 @@ col {
 
 .card-title {
   font-size: smaller;
-}
-.fiveDay {
-  font-size: large;
-  font-weight: bolder;
 }
 .built {
   font-size: x-small;
