@@ -103,7 +103,7 @@ function searchLocation(position) {
 
 
 function getCurrentLocation(event) {
-  event.preventDefault();
+  
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
