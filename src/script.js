@@ -102,7 +102,7 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coo
 
 
 function getCurrentLocation(event) {
-  
+  event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
@@ -146,7 +146,6 @@ function displayFahrenheitTemperature(event) {
 let fahrenheitTemperature = null;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
